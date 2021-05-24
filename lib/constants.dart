@@ -95,12 +95,13 @@ class BottomBar extends StatelessWidget {
 }
 
 class Posts extends StatelessWidget {
-  const Posts({Key key, @required this.width, @required this.image, this.title})
+  const Posts({Key key, @required this.width, @required this.image, this.title,this.isRequired})
       : super(key: key);
 
   final double width;
   final String title;
   final String image;
+ final int isRequired;
 
   @override
   Widget build(BuildContext context) {
@@ -110,11 +111,15 @@ class Posts extends StatelessWidget {
         width: width / 2.3,
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20.0),
-              child: Image.asset(
-                image,
-              ),
+            Stack(
+              children:[ ClipRRect(
+                borderRadius: BorderRadius.circular(20.0),
+                child: Image.asset(
+                  image,
+                ),
+                
+              ),Positioned(child:   Container(width:30.0,height: 30.0, child:isRequired!=0? FloatingActionButton(backgroundColor:Colors.white70,  onPressed: () {  },child: Center(child: Icon(Icons.add,color: Colors.black,),),):null),bottom: 10,right: 10,)
+               ]
             ),
             ListTile(
               title: title!=null? Text(title,style: GoogleFonts.roboto(fontSize:15.0,fontWeight: FontWeight.w500 )):Text(""),
@@ -150,7 +155,7 @@ class TodayPost extends StatelessWidget {
               width: width * 0.78,
               decoration: BoxDecoration(
                 boxShadow: [BoxShadow(
-                  color: Colors.black12,
+                  color: Colors.black38,
                           offset: Offset(3.0, 3.0),
                           blurRadius: 20.0
                 )],

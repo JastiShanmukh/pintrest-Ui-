@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
                         Column(
                           children: [
                             Stack(children:[
-                               Posts(
+                               Posts(isRequired: 0,
                                 width: width,
                                 image: 'images/1.jpg',
                                 title: 'Help India Fight COVID',
@@ -52,27 +52,27 @@ class Home extends StatelessWidget {
                             Positioned(top: 220.0,left: 45.0, child: InkWell(onTap: (){  }, child: Container(decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(20.0)),  child: Center(child: Text("Donate",style: TextStyle(fontSize: 20.0,color: Colors.white),)),width: width*0.25,height: 40.0,)))
                               ]
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/2.jpg',
                               title: 'Smiley Faces',
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/3.jpg',
                               title: 'Long title with description',
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/10.jpg',
                              
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/11.jpg',
                               title: 'What',
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/12.jpg',
                               title: 'What',
@@ -81,28 +81,28 @@ class Home extends StatelessWidget {
                         ),
                         Column(
                           children: [
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/4.jpg',
                               title: 'Hello',
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/5.jpg',
                               title: 'What',
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/6.jpg',
                               title: 'What',
                             ),
                            
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/8.jpg',
                               title: 'What',
                             ),
-                            Posts(
+                            Posts(isRequired: 0,
                               width: width,
                               image: 'images/9.jpg',
                               title: 'What',

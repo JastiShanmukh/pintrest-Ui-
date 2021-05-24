@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medium_ui/Today.dart';
+import 'package:medium_ui/design.dart';
+import 'package:medium_ui/flutter.dart';
 import 'package:medium_ui/home.dart';
 
 void main() {
@@ -36,8 +38,10 @@ class _HomePageState extends State<HomePage> {
     List<String> topBar = ["All", "Today", "UI", "Flutter"];
 
   return   PageView(controller: _pageController,
-    children:[ Home(width: width, height: height, topBar: topBar,index: Today(),),
+    children:[ Home(width: width, height: height, topBar: topBar,),
     Today(),
+    Design(),
+    Flutter()
      ] );
   }
 }
