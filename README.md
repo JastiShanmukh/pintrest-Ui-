@@ -1,10 +1,9 @@
-# medium_ui
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
+# pintrest_clone_ui
+Complete UI design of popular app pintrest. 
+Advance functionality like user tab,messages and home screen
+Download and learn
+Any suggestion or doubts feel free to contact 
+Thank you hope you like it
 
 A few resources to get you started if this is your first Flutter project:
 
