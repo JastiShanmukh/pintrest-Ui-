@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:medium_ui/Today.dart';
 import 'package:medium_ui/home.dart';
 
@@ -39,7 +37,7 @@ class _HomePageState extends State<HomePage> {
 
   return   PageView(controller: _pageController,
     children:[ Home(width: width, height: height, topBar: topBar,index: Today(),),
-    Today()
+    Today(),
      ] );
   }
 }
