@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medium_ui/bottomBar/message.dart';
+import 'package:medium_ui/bottomBar/profile.dart';
+import 'package:medium_ui/bottomBar/search.dart';
+import 'package:medium_ui/home.dart';
 class TopBar extends StatelessWidget {
   const TopBar({
     Key key,
@@ -78,10 +82,14 @@ class BottomBar extends StatelessWidget {
           child: Container(
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                IconButton(icon: Icon(Icons.home,),iconSize:30.0 , onPressed: () {}),
-                IconButton(icon: Icon(Icons.search),iconSize:30.0,color: Colors.grey , onPressed: () {}),
-                IconButton(icon: Icon(Icons.chat),iconSize:30.0,color: Colors.grey , onPressed: () {}),
-                IconButton(icon: Icon(Icons.person),iconSize:30.0 ,color: Colors.grey, onPressed: () {})
+                IconButton(icon: Icon(Icons.home,),iconSize:30.0 , onPressed: (){Navigator.pop(context,MaterialPageRoute(builder: (context)=>Home()),
+);}),
+                IconButton(icon: Icon(Icons.search),iconSize:30.0,color: Colors.grey , onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Search()),
+);}),
+                IconButton(icon: Icon(Icons.chat),iconSize:30.0,color: Colors.grey , onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) =>Message()),
+);}),
+                IconButton(icon: Icon(Icons.person),iconSize:30.0 ,color: Colors.grey, onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Profile()),
+);})
               ],
             ),
             width: width * 0.7,
