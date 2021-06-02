@@ -7,8 +7,11 @@ class Message extends StatefulWidget {
 class _MessageState extends State<Message> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amberAccent,
+    return SafeArea(
+      child: Scaffold(appBar: AppBar(backgroundColor: Colors.white,),
+        body: Container(color: Colors.grey[200],),
+        
+      ),
     );
   }
 }

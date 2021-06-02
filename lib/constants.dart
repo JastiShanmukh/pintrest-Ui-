@@ -82,7 +82,7 @@ class BottomBar extends StatelessWidget {
           child: Container(
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                IconButton(icon: Icon(Icons.home,),iconSize:30.0 , onPressed: (){Navigator.pop(context,MaterialPageRoute(builder: (context)=>Home()),
+                IconButton(icon: Icon(Icons.home),iconSize:30.0 , onPressed: (){Navigator.pop(context,MaterialPageRoute(builder: (context)=>Home()),
 );}),
                 IconButton(icon: Icon(Icons.search),iconSize:30.0,color: Colors.grey , onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Search()),
 );}),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:medium_ui/constants.dart';
 class Search extends StatefulWidget {
   @override
   _SearchState createState() => _SearchState();
@@ -15,59 +15,72 @@ class _SearchState extends State<Search> {
       child: Scaffold(
         body: Container(color: Colors.white38,
           width: width,
-          height: height * 2,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Container(
-                    width: width * 0.94,
-                    height: height * 0.06,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40.0),
-                        color: Colors.grey[200]),
-                    child: ListTile(
-                        trailing: Icon(
-                          Icons.camera_alt,
-                          color: Colors.black,
-                          size: 30.0,
-                        ),
-                        leading: Icon(
-                          Icons.search_rounded,
-                          color: Colors.black,
-                          size: 40.0,
-                        ),
-                        title: Text(
-                          "Search for Ideas",
-                          style: GoogleFonts.roboto(color: Colors.grey[600]),
-                        )),
+          
+          child: Stack(
+            children:[ SingleChildScrollView(
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Container(
+                      width: width * 0.94,
+                      height: height * 0.06,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40.0),
+                          color: Colors.grey[200]),
+                      child: ListTile(
+                          trailing: Icon(
+                            Icons.camera_alt,
+                            color: Colors.black,
+                            size: 30.0,
+                          ),
+                          leading: Icon(
+                            Icons.search_rounded,
+                            color: Colors.black,
+                            size: 40.0,
+                          ),
+                          title: Text(
+                            "Search for Ideas",
+                            style: GoogleFonts.roboto(color: Colors.grey[600]),
+                          )),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Text(
-                  "Ideas for you",
-                  style: GoogleFonts.roboto(
-                      fontSize: 30.0, fontWeight: FontWeight.w700),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                MainContainer(width: width, height: height),
-                 Text(
-                  "Popular on Pintrest",
-                  style: GoogleFonts.roboto(
-                      fontSize: 30.0, fontWeight: FontWeight.w700),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                MainContainer(width: width, height: height),
-
-              ],
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    "Ideas for you",
+                    style: GoogleFonts.roboto(
+                        fontSize: 30.0, fontWeight: FontWeight.w500),
+                  ),
+                  
+                  MainContainer(width: width, height: height),
+                   SizedBox(
+                    height: 10.0,
+                  ),
+                   Text(
+                    "Popular on Pintrest",
+                    style: GoogleFonts.roboto(
+                        fontSize: 30.0, fontWeight: FontWeight.w500),
+                  ),
+                 
+                  MainContainer(width: width, height: height),
+                   SizedBox(
+                    height: 10.0,
+                  ),
+                    Text(
+                    "Men's Fashion",
+                    style: GoogleFonts.roboto(
+                        fontSize: 30.0, fontWeight: FontWeight.w500),
+                  ),
+                
+                  MainContainer(width: width, height: height),
+                  SizedBox(height: 80.0,)
+                ],
+              ),
             ),
+             BottomBar(width: width, height: height)
+            ]
           ),
         ),
       ),
@@ -97,15 +110,15 @@ class MainContainer extends StatelessWidget {
                 SearchCard(width: width, height: height,cardTitle: "Design",imageText:"design/design1.jpg" ,),
                 SearchCard(width: width, height: height,cardTitle: "Pixel Art",imageText:"search/1.jpg" ,),
                 SearchCard(width: width, height: height,cardTitle: "Sketch",imageText:"search/2.jpg" ,),
-                SearchCard(width: width, height: height,cardTitle: "Doodle Art",imageText:"search/3.jpg" ,)
+                SearchCard(width: width, height: height,cardTitle: "Art",imageText:"search/3.jpg" ,)
               ],
             ),
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SearchCard(width: width, height: height,cardTitle: "Design",imageText:"design/design4.jpg" ,),
-                SearchCard(width: width, height: height,cardTitle: "Pixel Art",imageText:"search/5.jpg" ,),
-                SearchCard(width: width, height: height,cardTitle: "Sketch",imageText:"search/6.jpg" ,),
-                SearchCard(width: width, height: height,cardTitle: "Doodle Art",imageText:"search/7.jpg" ,)
+                SearchCard(width: width, height: height,cardTitle: "Doodle Art",imageText:"search/4.jpg" ,),
+                SearchCard(width: width, height: height,cardTitle: "Digital Art",imageText:"search/5.jpg" ,),
+                SearchCard(width: width, height: height,cardTitle: "Street Art",imageText:"search/6.jpg" ,),
+                SearchCard(width: width, height: height,cardTitle: "Photography",imageText:"search/7.jpg" ,)
               ],
             )
           ],
